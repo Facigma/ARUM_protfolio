@@ -1,0 +1,16 @@
+---
+const { src, name, description, class: className } = Astro.props;
+const type = src.split(".").pop() || "webm";
+---
+
+<main class="flex flex-col gap-3 items-center">
+  
+  <p class="text-gray-800 font-semibold text-xl center">{name}</p>
+  <video class:list={["w-fit", className]} preload="none" controls>
+    <source src={src} type={`video/${type}`} />
+  </video>
+  
+  <p class="gap-1">{description}</p>
+  
+  
+</main>

@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "vazirmatn";
+}
 /* Add Your Custom CSS Here */
+
 
 .prose img {
   border-radius: 30px;

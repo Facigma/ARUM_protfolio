@@ -1,15 +1,16 @@
 ---
 import projects from "../collections/projects.json";
 import PageHeading from "../components/page-heading.astro";
-import Project from "../components/project.astro";
+//import Project from "../components/project.astro";
 import Layout from "../layouts/main.astro";
+import Video from "../components/Video.astro";
 ---
 
 <Layout title="My Projects">
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
-      title="My Projects"
-      description="Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!"
+      title="نمونه کارهای من"
+      description="این نمونه کارها، پروژهایی هست که در طول 3 سال تجربه در زمینه ادیت و موشن گرافی درستشون کردم"
     />
 
     <div
@@ -18,13 +19,15 @@ import Layout from "../layouts/main.astro";
       {
         projects.map((project) => {
           return (
-            <Project
+            <Video
+              src={project.url}
+              
+              class="w-full rounded-2xl object-cover shadow-lg outline-2 outline-gray-500/75 outline-offset-2 outline-dashed"
+              
               name={project.name}
               description={project.description}
-              image={project.image}
-              url={project.url}
             />
-          )
+          );
         })
       }
     </div>
