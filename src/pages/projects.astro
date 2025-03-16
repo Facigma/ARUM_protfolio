@@ -6,14 +6,14 @@ import Video from "../components/Video.astro";
 ---
 
 <Layout title="نمونه کارها">
-  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
       title="نمونه کارهای من"
       description="این نمونه کارها، پروژهایی هست که در طول 3 سال تجربه در زمینه ادیت و موشن گرافی درستشون کردم."
     />
 
     <div
-      class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+      class="z-50 grid items-stretch w-full grid-cols-1 sm:grid-cols-1 md:grid-cols-2 my-8 gap-10 sm:gap-5 "
     >
     {
       projects.map((project) => {
