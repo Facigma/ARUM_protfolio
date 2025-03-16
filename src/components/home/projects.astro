@@ -5,7 +5,7 @@ import Button from "../button.astro";
 import Video from "../../components/Video.astro";
 ---
 
-<section class="max-w-xl mx-auto px-7 lg:px-0">
+<section class="max-w-3xl mx-auto px-7 lg:px-0">
   <h2
     class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
@@ -15,14 +15,14 @@ import Video from "../../components/Video.astro";
     اینا کارهای برگزیدم هستن که دستت بیاد چه کاری از دستم برمیاد.
   </p>
   <div
-    class="grid items-stretch w-full grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-7 mt-7"
+    class="grid h-full grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-10 mt-7"
   >
     {
       projects.map((project) => {
         return (
           <Video
             src={project.url}
-            class="w-full rounded-2xl object-cover shadow-lg outline-2 outline-gray-500/75 outline-offset-2 outline-dashed"
+            class="rounded-xl drop-shadow-xl border-[3px] border-gray-800"
             name={project.name}
             description={project.description}
           />
@@ -31,7 +31,7 @@ import Video from "../../components/Video.astro";
     }
   </div>
 
-  <div class="flex items-center justify-center w-full py-5">
+  <div class="flex items-center  justify-center w-full py-5">
     <Button text="تمام نمونه کارارو اینجا ببین!" link="/projects" />
   </div>
 </section>

@@ -5,7 +5,7 @@ import Layout from "../layouts/main.astro";
 import Video from "../components/Video.astro";
 ---
 
-<Layout title="My Projects">
+<Layout title="نمونه کارها">
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
       title="نمونه کارهای من"
@@ -15,20 +15,18 @@ import Video from "../components/Video.astro";
     <div
       class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
     >
-      {
-        projects.map((project) => {
-          return (
-            <Video
-              src={project.url}
-              
-              class="w-full rounded-2xl object-cover shadow-lg outline-2 outline-gray-500/75 outline-offset-2 outline-dashed"
-              
-              name={project.name}
-              description={project.description}
-            />
-          );
-        })
-      }
+    {
+      projects.map((project) => {
+        return (
+          <Video
+            src={project.url}
+            class="rounded-xl drop-shadow-xl border-[3px] border-gray-800"
+            name={project.name}
+            description={project.description}
+          />
+        );
+      })
+    }
     </div>
   </section>
 </Layout>

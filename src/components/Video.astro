@@ -4,13 +4,17 @@ const type = src.split(".").pop() || "webm";
 ---
 
 <main class="flex flex-col gap-3 items-center">
-  
   <p class="text-gray-800 font-semibold text-xl center">{name}</p>
-  <iframe class:list={["w-fit", className]} src={src} allowfullscreen>
-    
-  </iframe>
-  
-  <p class="gap-1">{description}</p>
-  
+
+  <div style="position: relative;">
+    <span style="display: block;padding-top: 6%"></span>
+    <iframe
+      class:list={["top-0 left-0 w-auto h-full", className]}
+      src={src}
+      allowFullScreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true">
+    </iframe>
+  </div>
   
 </main>
